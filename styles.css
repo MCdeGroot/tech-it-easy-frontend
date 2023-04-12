@@ -1,0 +1,157 @@
+/*////////////////////////
+    Table of Contents
+1. Global Styles
+2. Typography
+3. Layout
+        3.1 Reusables
+        3.2 Other
+4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+5. Media Queries
+ */
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+
+/*Kleuren*/
+
+:root {
+    --color-green: #1f883f;
+    --color-red: #ec0e16; /*header background*/
+    --color-blue: rgba(51, 88, 182, 0.91);
+    --color-black-standard-text: #0C0C0C; /*standaard tekst*/
+    --color-light-purple-big-floating-words: #F2F0FF;
+    --color-light-grey-background-projects: #F3F6F9;
+    --color-grey-service-tile: #7A7A7A;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 1200px; /*1200px gepakt volgens deze website https://van-ons.nl/blog/visueel-ontwerp/specificaties-van-een-goed-webdesign/*/
+    padding: 1rem;
+    align-items: center;
+    text-align: center; /* tekst centreeren binnen de container*/
+}
+
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+.header {
+    background-color: var(--color-blue);
+    background: linear-gradient(129deg, #4B49E8 0%, #4B49E8 26%, #5722CD 100%);
+    color: white;
+    position: relative;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.nav-bar > ul {
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 200px;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    list-style-type: none;
+}
+
+.header-content-styling-div {
+    padding: 1rem;
+    width: 100%;
+}
+
+.nav-bar a {
+    color: white;
+}
+
+/* --------------- 4.2 main ------------------- */
+.articles-dashboard-container {
+    background: linear-gradient(129deg, #4B49E8 0%, #4B49E8 26%, #5722CD 100%);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 1 400px;
+}
+
+.article-dashboard {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 400px;
+    padding: 1rem;
+    justify-content: space-between;
+    border: 1px solid var(--color-blue);
+    border-radius: 0.5rem;
+
+}
+
+#items-sold {
+    color: var(--color-green);
+    font-style: italic;
+    font-weight: bold;
+
+}
+#items-bought {
+    color: var(--color-blue);
+    font-style: italic;
+    font-weight: bold;
+}
+#current-stock {
+    color: var(--color-red);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.brands {
+    background-color: var(--color-light-grey-background-projects);
+    padding: 2rem 0 0 0;
+}
+
+.products {
+
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */

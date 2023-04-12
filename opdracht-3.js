@@ -3,7 +3,19 @@
 //   dubbele namen in zitten, is niet erg.
 
 
+function getBrandArray(array){
+const availableBrands = inventory.map((brand) => {
+    return `<li>${brand.brand}</li>`;
+});
 
+const uniqueBrands = [...new Set(availableBrands)];
+
+const brandList = document.getElementById('brand-list');
+
+brandList.innerHTML = `${uniqueBrands}`;
+}
+
+getBrandArray(inventory);
 
 // * **Opdracht 3b:** Schrijf de code uit 3a om naar een functie die een array met tv-objecten verwacht. Het is handig om
 //   onze scripts als functies op te zetten, zodat we ze gemakkelijk kunnen hergebruiken. _Tip_: vergeet deze functie
